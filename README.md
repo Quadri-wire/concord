@@ -71,8 +71,8 @@ pnpm concord --help
 ## Deploying
 
 The [`Dockerfile`](./Dockerfile) builds one image that serves the API and the dashboard. Give it
-a volume at `/data`, put TLS in front, and set `CONCORD_PUBLIC_URL` to the https address people
-open.
+a volume at `/data`, put TLS in front (see [`docs/deploy/nginx.md`](./docs/deploy/nginx.md) for an
+nginx and Certbot recipe), and set `CONCORD_PUBLIC_URL` to the https address people open.
 
 ```sh
 docker build -t concord .
@@ -86,7 +86,7 @@ always-on instance with a local disk. It does not fit serverless hosts.
 no persistent disk: every account, upload and sign-off is erased when the service restarts or
 spins down after fifteen idle minutes. `CONCORD_EPHEMERAL=1` makes the dashboard say so on every
 page. For anything people should come back to, use a paid instance with a disk at `/data` (or
-Fly.io, or a VPS) and remove that variable.
+Fly.io, or a VPS with [nginx](./docs/deploy/nginx.md)) and remove that variable.
 
 ## Layout
 
