@@ -70,7 +70,7 @@ Create an nginx configuration file at `/etc/nginx/sites-available/concord`:
 # HTTP - Redirect all traffic to HTTPS
 server {
     listen 80;
-    listen [:::80];
+    listen [::]:80;
     server_name concord.example.com;
 
     # Let's Encrypt validation path
@@ -86,7 +86,7 @@ server {
 # HTTPS - Reverse Proxy to Concord
 server {
     listen 443 ssl http2;
-    listen [:::443 ssl http2];
+    listen [::]:443 ssl http2;
     server_name concord.example.com;
 
     # SSL certificates managed by Certbot
