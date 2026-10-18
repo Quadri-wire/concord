@@ -117,7 +117,9 @@ covered in [`docs/upgrading.md`](./docs/upgrading.md).
 | `apps/web` | Dashboard: sign-in, breaks and sign-off, holdings, corporate actions, controls log, audit export, team |
 
 The tables in `control.db` and in each workspace database are described in
-[`docs/schema.md`](./docs/schema.md).
+[`docs/schema.md`](./docs/schema.md). Core Stellar blockchain concepts (CAP-67, SEP-41, trustlines,
+authorisation flags, and baselines) are defined for finance and compliance readers in the
+[Stellar glossary](./docs/glossary-stellar.md).
 
 ## Input files
 
